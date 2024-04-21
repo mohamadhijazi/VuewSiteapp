@@ -1,31 +1,47 @@
 .top-nav {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .main-menu {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .main-menu li {
-    margin-right: 20px;
-  }
-  
-  .main-menu a {
-    text-decoration: none;
-    color: #fff;
-  }
-  
-  .submenu {
-    display: none;
-    position: absolute;
-    background-color: #444;
-    padding: 10px;
-  }
-  
-  .has-submenu:hover .submenu {
-    display: block;
-  }
+  background-color: #333;
+  color: #fff;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-menu li {
+  margin-right: 20px;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  padding: 10px;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.username {
+  text-align: center;
+}
+
+.userItem {
+
+  border: 1px solid gray;
+  margin: 10px 0px;
+
+  box-shadow: 10 px gray;
+
+  border-radius: 5px;
+  box-shadow: -7px -2px 38px 5px rgba(0, 0, 0, 0.26);
+  background-color: #fafafa;
+}
