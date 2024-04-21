@@ -39,6 +39,7 @@ vueapp.component('BodyComponent', {
     },
     data() {
         return {
+            users:[],
             hideMain: false,
             title: 'Introducing Amazon Echo Show 15: A smart display that blends into your home',
            
@@ -53,20 +54,23 @@ vueapp.component('BodyComponent', {
 
         }
     },
+    mounted:function(){
+        this.users.push({Id:1,Name:"MohammadHijazi",gender:"M",inTeam:true,desc:"TEchnology innovation Designer makers"});
+        this.users.push({Id:1,Name:"MohammadHijazi",gender:"M",inTeam:true,desc:"TEchnology innovation Designer makers"});
+        this.users.push({Id:1,Name:"MohammadHijazi",gender:"M",inTeam:true,desc:"TEchnology innovation Designer makers"});
+        this.users.push({Id:1,Name:"MohammadHijazi",gender:"M",inTeam:true,desc:"TEchnology innovation Designer makers"});
+    },
     template: `
     
-    <h2 class="title--large main-title">{{ title }}
-    
-    </h2>
-    <div class="col-md-12">
-                    <div class="form-group" :class="{ error: v$.title.$errors.length }">
-                        <label for="exampleInputEmail1">Title</label>
-                        <input type="text" class="form-control" id="title" aria-describedby="title" v-model="v$.title.$model"/>
-                        <div class="input-errors" v-for="error of v$.title.$errors" :key="error.$uid">
-                            <div class="error-msg">{{ error.$message }}</div>
-                        </div>
-                    </div>
-                </div>
-   
+    <div class="row">
+
+        <div class="col-md-4" v-for="user in users" :key="user.Id">
+           <div class="userpic"></div>
+           <div class="username">{{user.Name}}</div>
+           <div class="userdetails"><span class="gender">{{user.gender}}</span><span class="inteam">{{user.inTeam}}</span></div>
+           <div class="userBio">{{user.desc}}</div>
+        </div>
+    </div>
+    </div>
     `
   });
