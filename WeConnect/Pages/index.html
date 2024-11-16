@@ -6,6 +6,16 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Innovation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="white"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+<link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+<meta name="theme-color" content="white"/>  
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+<meta name="apple-mobile-web-app-title" content="Hello World"> 
+<meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+<meta name="msapplication-TileColor" content="#FFFFFF">
 
   <!-- Load required Bootstrap and BootstrapVue CSS -->
   <link type="text/css" rel="stylesheet" href="../Innovation_files/bootstrap.min.css">
@@ -55,7 +65,19 @@
   <script src="../Components/mainEnd.js"></script>
   
 
-  
+  <script>
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js', {
+        scope: '.' // <--- THIS BIT IS REQUIRED
+    }).then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+    });
+}
+  </script>
 </body>
 
 </html>
