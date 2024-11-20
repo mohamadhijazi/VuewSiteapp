@@ -5,7 +5,7 @@ vueapp.component('FooterCompenent', {
     }),
     template: `
       <div>        
-        <h8>Copy rights @, {{year}}</h8>
+        <h3>Copy rights @, {{year}}</h3>
       </div>
     `
   });

@@ -2,7 +2,7 @@
 vueapp.component('HeaderComponenet', {
     data: function(){
       return{
-      tab:"Page1.html",
+      tab:"index.html",
       }
     },
     template: `
@@ -18,9 +18,7 @@ vueapp.component('HeaderComponenet', {
         v-model="tab"
         bg-color="primary"
       >
-        <v-tab value="page1.html"><a href="page1.html">Find colleagues</a></v-tab>
         <v-tab value="index.html"><a href="index.html">Teams</a></v-tab>
-        <v-tab value="three">My Account</v-tab>
       </v-tabs>
 
       </template>
